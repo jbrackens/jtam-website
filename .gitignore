@@ -8,3 +8,4 @@ dist.nosync
 .claude
 .gstack/
 .gstack-screenshots/
+.gstack-audit/
