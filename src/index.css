@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  :root {
+    --font-serif: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+    /* Aurora spectral signature (cool, purple-free) */
+    --spectral: linear-gradient(90deg, #6EE7B7, #2DD4BF, #22D3EE, #38BDF8, #3B82F6);
+    --spectral-v: linear-gradient(180deg, #6EE7B7, #2DD4BF, #22D3EE, #38BDF8, #3B82F6);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background: #050608;
+  }
+
+  body {
+    @apply antialiased;
+    font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.6);
+    background: #050608;
+  }
+
+  section[id] {
+    scroll-margin-top: 84px;
+  }
+
+  a {
+    @apply no-underline;
+    color: inherit;
+  }
+
+  ::selection {
+    background: #22D3EE;
+    color: #050608;
+  }
+
+  :focus-visible {
+    outline: 2px solid #0369A1;
+    outline-offset: 2px;
+  }
+}
+
+@layer components {
+  /* Aurora gradient clipped to text (wordmark, accents) */
+  .text-spectral {
+    background-image: var(--spectral);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Frosted glass surface */
+  .glass {
+    background: rgba(12, 15, 20, 0.7);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+  }
+
+  /* Frosted nav pill */
+  .nav-pill {
+    background: rgba(12, 15, 20, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 9999px;
+  }
+}
+
+/* Smooth scroll via Lenis */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* Scroll-reveal (progressive enhancement; content stays visible without JS) */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Accessibility: respect reduced-motion globally */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+  .js [data-reveal] {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

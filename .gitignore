@@ -1,0 +1,10 @@
+node_modules
+dist
+dist.nosync
+.DS_Store
+*.local
+.vercel
+.superpowers
+.claude
+.gstack/
+.gstack-screenshots/
