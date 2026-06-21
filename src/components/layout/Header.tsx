@@ -36,7 +36,7 @@ export default function Header() {
           aria-label="JTAM Group, home"
         >
           <Logo size={24} spin />
-          JTAM
+          JTAM Group
         </Link>
 
         <nav className="hidden items-center gap-7 whitespace-nowrap lg:flex" aria-label="Primary">

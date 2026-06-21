@@ -3,6 +3,34 @@ import Container from '@/components/ui/Container'
 import Button from '@/components/ui/Button'
 import AuroraCanvas from './AuroraCanvas'
 
+const TICKER_ITEMS = [
+  'Strategy',
+  'Engineering',
+  'Operations',
+  'Cloud & Infra',
+  'Data & AI',
+  'Architecture',
+  'Security',
+  'Product',
+  'Consulting',
+  'Transformation',
+]
+
+function TickerStrip() {
+  return (
+    <div className="flex shrink-0 items-center">
+      {TICKER_ITEMS.map((item, i) => (
+        <span key={i} className="flex shrink-0 items-center">
+          <span className="px-4 text-[24px] font-bold uppercase tracking-[0.08em] text-white sm:px-6 sm:text-[36px] lg:px-8 lg:text-[44px]">
+            {item}
+          </span>
+          <span className="h-2 w-2 shrink-0 rounded-full bg-white/40 sm:h-2.5 sm:w-2.5" />
+        </span>
+      ))}
+    </div>
+  )
+}
+
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null)
   const [scrollProgress, setScrollProgress] = useState(0)
@@ -72,33 +100,19 @@ export default function Hero() {
                 </Button>
               </div>
             </div>
-
-            {/* Roles strip */}
-            <div className="mt-16 animate-fade-up" style={{ animationDelay: '400ms' }}>
-              <div className="flex flex-wrap items-center justify-center gap-6 font-mono text-[12px] uppercase tracking-[0.14em] text-white/30">
-                <span>Strategy</span>
-                <span className="hidden h-1 w-1 rounded-full bg-white/20 sm:block" />
-                <span>Engineering</span>
-                <span className="hidden h-1 w-1 rounded-full bg-white/20 sm:block" />
-                <span>Operations</span>
-              </div>
-            </div>
           </div>
         </Container>
 
-        {/* Scroll indicator */}
+        {/* Marquee ticker band */}
         <div
-          className="absolute bottom-8 left-1/2 -translate-x-1/2"
-          style={{ opacity: Math.max(0, 1 - scrollProgress * 5) }}
+          className="absolute bottom-0 left-0 right-0 z-20 overflow-hidden border-y border-white/[0.06] bg-white/[0.03] py-5 backdrop-blur-sm sm:py-6"
+          aria-hidden="true"
         >
-          <div className="flex flex-col items-center gap-2">
-            <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-white/20">Scroll</span>
-            <div className="h-8 w-px bg-gradient-to-b from-white/20 to-transparent" />
+          <div className="flex w-max animate-marquee">
+            <TickerStrip />
+            <TickerStrip />
           </div>
         </div>
-
-        {/* Bottom gradient fade */}
-        <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-base to-transparent" />
       </div>
     </section>
   )

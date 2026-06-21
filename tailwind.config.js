@@ -96,6 +96,10 @@ export default {
           '0%,100%': { transform: 'translateY(0)' },
           '50%': { transform: 'translateY(-8px)' },
         },
+        'marquee': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         'fade-up': 'fade-up .75s cubic-bezier(0.22,1,0.36,1) both',
@@ -106,6 +110,7 @@ export default {
         'cell-pulse': 'cell-pulse 1.8s ease-in-out infinite',
         'gradient-shift': 'gradient-shift 8s ease infinite',
         'float': 'float 4s ease-in-out infinite',
+        'marquee': 'marquee 30s linear infinite',
       },
     },
   },
