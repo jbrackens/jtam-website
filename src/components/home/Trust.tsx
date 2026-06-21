@@ -45,7 +45,7 @@ export default function Trust() {
                 {safeguards.map((s, i) => (
                   <Reveal key={s.title} delay={i * 60}>
                     <div className="py-3">
-                      <h3 className="text-[17px] font-semibold text-white/80">{s.title}</h3>
+                      <h3 className="text-[20px] font-semibold text-white/80">{s.title}</h3>
                       <p className="mt-1.5 text-[14px] leading-[1.55] text-white/40">{s.description}</p>
                     </div>
                   </Reveal>
