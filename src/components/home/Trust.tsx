@@ -62,8 +62,8 @@ export default function Trust() {
               <Button href="mailto:hello@jtamb.com" arrow>
                 Start a conversation
               </Button>
-              <Button href="#how-it-works" variant="secondary">
-                See how we work
+              <Button href="#capabilities" variant="secondary">
+                Explore capabilities
               </Button>
             </div>
           </div>

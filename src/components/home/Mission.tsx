@@ -2,7 +2,7 @@ import Container from '@/components/ui/Container'
 
 export default function Mission() {
   return (
-    <section className="bg-[#F5F3EE]">
+    <section id="mission" className="bg-[#F5F3EE]">
       {/* Horse equation band */}
       <div className="flex items-center justify-center px-8 py-16 sm:py-20 lg:py-24">
         <img

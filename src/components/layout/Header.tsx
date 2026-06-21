@@ -4,9 +4,8 @@ import Logo from '@/components/Logo'
 import Button from '@/components/ui/Button'
 
 const navItems: [string, string][] = [
-  ['How it works', '#how-it-works'],
+  ['About', '#mission'],
   ['Capabilities', '#capabilities'],
-  ['Use cases', '#use-cases'],
   ['Contact', '#contact'],
 ]
 

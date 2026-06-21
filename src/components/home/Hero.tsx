@@ -56,7 +56,7 @@ export default function Hero() {
   const contentTranslate = scrollProgress * -60
 
   return (
-    <section ref={sectionRef} className="relative h-[300vh] bg-base">
+    <section ref={sectionRef} className="relative h-[200vh] bg-base">
       {/* Sticky viewport */}
       <div className="sticky top-0 h-screen overflow-hidden">
         <AuroraCanvas />
@@ -95,8 +95,8 @@ export default function Hero() {
                 <Button href="mailto:hello@jtamb.com" arrow>
                   Start a conversation
                 </Button>
-                <Button href="#how-it-works" variant="secondary">
-                  How we work
+                <Button href="#capabilities" variant="secondary">
+                  What we do
                 </Button>
               </div>
             </div>
