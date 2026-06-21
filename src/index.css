@@ -105,6 +105,12 @@ html.lenis, html.lenis body {
   transform: none;
 }
 
+/* Pause continuous loops when the tab is hidden (battery + DESIGN.md invariant) */
+html.motion-paused .animate-logo-spin,
+html.motion-paused .animate-marquee {
+  animation-play-state: paused;
+}
+
 /* Accessibility: respect reduced-motion globally */
 @media (prefers-reduced-motion: reduce) {
   *,

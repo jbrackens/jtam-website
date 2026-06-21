@@ -24,6 +24,15 @@ export default function SiteLayout() {
     return () => lenis.destroy()
   }, [])
 
+  // Pause continuous CSS loops (logo spin, marquee) while the tab is hidden.
+  useEffect(() => {
+    const onVis = () => {
+      document.documentElement.classList.toggle('motion-paused', document.hidden)
+    }
+    document.addEventListener('visibilitychange', onVis)
+    return () => document.removeEventListener('visibilitychange', onVis)
+  }, [])
+
   return (
     <div className="min-h-screen bg-base">
       <a
