@@ -73,7 +73,7 @@ export default function Hero() {
             }}
           >
             <span className="inline-block animate-fade-up">
-              <span className="inline-flex items-center gap-2 rounded-pill border border-white/[0.08] bg-white/[0.04] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-white/50">
+              <span className="inline-flex items-center gap-2 rounded-pill border border-white/[0.08] bg-white/[0.04] px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-fg-muted">
                 <span className="h-1.5 w-1.5 rounded-full bg-mint" />
                 Technology Consulting
               </span>
@@ -87,7 +87,7 @@ export default function Hero() {
             </div>
 
             <div className="animate-fade-up" style={{ animationDelay: '240ms' }}>
-              <p className="mx-auto mt-8 max-w-[52ch] text-[18px] font-medium leading-[1.55] text-white/60 sm:text-xl">
+              <p className="mx-auto mt-8 max-w-[52ch] text-[18px] font-medium leading-[1.55] text-fg-body sm:text-xl">
                 JTAM Group helps businesses navigate complexity — from strategy and architecture through engineering and operations — so you can build with confidence and scale with clarity.
               </p>
 

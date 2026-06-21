@@ -30,7 +30,7 @@ export default function Header() {
       <div className={`mx-auto flex h-16 max-w-[1200px] items-center justify-between px-6 transition-all duration-500 sm:px-8 ${scrolled ? 'mx-4 mt-3 nav-pill sm:mx-8' : ''}`}>
         <Link
           to="/"
-          className="flex min-h-[44px] shrink-0 items-center gap-2.5 text-[18px] font-bold tracking-[-0.01em] text-white/90"
+          className="flex min-h-[44px] shrink-0 items-center gap-2.5 text-[18px] font-bold tracking-[-0.01em] text-fg"
           aria-label="JTAM Group, home"
         >
           <Logo size={24} spin />
@@ -42,7 +42,7 @@ export default function Header() {
             <a
               key={label}
               href={href}
-              className="flex min-h-[44px] items-center text-sm font-medium text-white/50 transition-colors hover:text-white/90"
+              className="flex min-h-[44px] items-center text-sm font-medium text-fg-muted transition-colors hover:text-fg"
             >
               {label}
             </a>
@@ -79,7 +79,7 @@ export default function Header() {
               key={label}
               href={href}
               onClick={() => setOpen(false)}
-              className="border-b border-line py-3 text-[16px] font-semibold text-white/90"
+              className="border-b border-line py-3 text-[16px] font-semibold text-fg"
             >
               {label}
             </a>

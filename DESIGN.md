@@ -54,17 +54,39 @@ Tight tracking on display sizes (`-0.03em` to `-0.04em`). Direct, plainspoken he
 
 A dark architecture palette with the cool **Aurora** spectral signature.
 
+**Surfaces**
+
 | Token | Hex | Usage |
 |---|---|---|
 | `base` | `#050608` | Main page background (dark) |
 | `graphite` | `#0C0F14` | Stage panels, visual panels |
-| `body` | `rgba(255,255,255,0.60)` | Paragraph text on dark (7.3:1, AA) |
-| `muted` | `rgba(255,255,255,0.55)` | Labels, metadata, secondary text (6.3:1, AA) |
-| `line` | `rgba(255,255,255,0.06)` | Hairline borders |
+| `cream` | `#F5F3EE` | Mission light surface |
+| `line` | `rgba(255,255,255,0.06)` | Hairline borders (`border-line`) |
 | `signal` | `#7DD3FC` | Solid UI accents |
 | `deep-signal` | `#0369A1` | Link hovers, active annotations |
 
-**Contrast floor:** any text that conveys meaning must clear WCAG AA on its background — 4.5:1 for normal text, 3:1 for large (18px+). On `#050608` that means `white/50` is the minimum for body/labels (`white/55` preferred); never drop reading text to `white/40` or below. On the cream Mission surface (`#F5F3EE`), ink text needs `#0C0F14/60`+ for labels and `/70`+ for body. Opacities below these are decorative only.
+**Text — solid, pre-composited scale.** Text colors are solid hex, not
+white-at-opacity. Opacity composites against whatever sits behind the text, so
+contrast drifts over the tinted cards, the Aurora glow, and the cream section;
+solid values give one exact contrast everywhere. Ratios below are vs `base`
+(and hold ≥AA over the lighter dark surfaces too).
+
+| Token | Hex | Contrast | Usage |
+|---|---|---|---|
+| `fg` | `#E6E7E9` | 16.4:1 | Headings, emphasis |
+| `fg-strong` | `#CDCFD2` | 13.0:1 | Strong labels (footer column heads) |
+| `fg-body` | `#9C9EA1` | 7.6:1 | Body / lede |
+| `fg-muted` | `#909295` | 6.5:1 | Captions, eyebrows, links, meta |
+| `fg-faint` | `#6A6C6F` | 3.9:1 | Decorative / large-text only — **not** AA for small text |
+| `ink` | `#0C0F14` | 17.3:1 | Primary text on `cream` |
+| `ink-body` | `#525355` | 6.9:1 | Body on `cream` |
+| `ink-muted` | `#696A6B` | 4.9:1 | Labels / eyebrow on `cream` |
+
+**Contrast floor:** any text that conveys meaning must clear WCAG AA — 4.5:1
+normal, 3:1 large (18px+). The scale above is the source of truth; pick the
+level by role, never hand-roll `text-white/NN`. `fg-faint`/decorative tones below
+the floor are for non-reading elements only (corner brackets, the dimmed second
+clause of a large heading, etc.).
 
 ### Aurora spectral signature
 

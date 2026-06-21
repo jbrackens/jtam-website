@@ -30,19 +30,24 @@ export default {
         // Dark-first base
         dark: '#050608',
         graphite: '#0C0F14',
-        ink: '#050608',
         base: '#050608',
         soft: '#0C0F14',
         cream: '#F5F3EE', // Mission light surface
         surface: '#111519',
         'surface-alt': '#181C22',
-        // Text on dark (opacities meet WCAG AA on #050608 — see DESIGN.md)
+        // Foreground on dark — solid, pre-composited. Contrast is EXACT on every
+        // dark surface (base, tinted cards, Aurora glow), not approximate the way
+        // white-at-opacity is. AA-verified; see DESIGN.md → Color System.
         white: '#FFFFFF',
-        body: 'rgba(255,255,255,0.6)',
-        muted: 'rgba(255,255,255,0.55)',
-        'text-primary': 'rgba(255,255,255,0.9)',
-        'text-secondary': 'rgba(255,255,255,0.6)',
-        'text-tertiary': 'rgba(255,255,255,0.55)',
+        fg: '#E6E7E9',          // primary: headings, emphasis
+        'fg-strong': '#CDCFD2', // strong labels (e.g. footer column heads)
+        'fg-body': '#9C9EA1',   // body / lede
+        'fg-muted': '#909295',  // captions, eyebrows, links, meta
+        'fg-faint': '#6A6C6F',  // decorative / large-text only — NOT AA for small text
+        // Foreground on the cream Mission surface (#F5F3EE)
+        ink: '#0C0F14',         // primary dark text (headings)
+        'ink-body': '#525355',  // body
+        'ink-muted': '#696A6B', // labels / eyebrow
         // Aurora stops
         mint: '#6EE7B7',
         teal: '#2DD4BF',

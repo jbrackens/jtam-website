@@ -46,10 +46,10 @@ export default function Roles() {
     <section className="relative bg-base py-24 sm:py-32">
       <Container>
         <Reveal>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-fg-muted">
             What we do
           </p>
-          <h2 className="mt-4 max-w-[22ch] text-[32px] font-bold leading-[1.04] tracking-[-0.03em] text-white/90 sm:text-[42px]">
+          <h2 className="mt-4 max-w-[22ch] text-[32px] font-bold leading-[1.04] tracking-[-0.03em] text-fg sm:text-[42px]">
             End-to-end expertise.{' '}
             <span className="font-serif font-normal italic">Delivered.</span>
           </h2>
@@ -62,13 +62,13 @@ export default function Roles() {
                 <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-[12px] bg-white/[0.06] text-cyan">
                   {role.icon}
                 </div>
-                <h3 className="text-[20px] font-bold text-white/90">{role.title}</h3>
-                <p className="mt-3 text-[15px] leading-[1.6] text-white/50">{role.description}</p>
+                <h3 className="text-[20px] font-bold text-fg">{role.title}</h3>
+                <p className="mt-3 text-[15px] leading-[1.6] text-fg-muted">{role.description}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {role.capabilities.map((cap) => (
                     <span
                       key={cap}
-                      className="rounded-pill border border-line bg-white/[0.03] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-white/55"
+                      className="rounded-pill border border-line bg-white/[0.03] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-fg-muted"
                     >
                       {cap}
                     </span>

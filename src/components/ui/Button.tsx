@@ -2,8 +2,8 @@ import type { ReactNode } from 'react'
 
 const VARIANTS = {
   primary: 'bg-white text-dark border border-transparent hover:bg-white/90',
-  secondary: 'bg-white/[0.06] text-white/90 border border-white/[0.1] hover:bg-white/[0.1]',
-  ghost: 'bg-transparent text-white/80 border border-white/[0.12] hover:bg-white/[0.06]',
+  secondary: 'bg-white/[0.06] text-fg border border-white/[0.1] hover:bg-white/[0.1]',
+  ghost: 'bg-transparent text-fg-strong border border-white/[0.12] hover:bg-white/[0.06]',
   signal: 'bg-signal text-[#04263a] border border-[#bfe9fb] hover:bg-[#9fe0ff]',
   white: 'bg-white text-dark border border-transparent hover:bg-white/90',
 }

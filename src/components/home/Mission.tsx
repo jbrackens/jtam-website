@@ -18,7 +18,7 @@ export default function Mission() {
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
             {/* Big staggered text */}
             <div
-              className="flex flex-col gap-1 text-[44px] font-extrabold uppercase leading-[0.95] tracking-[-0.02em] text-graphite sm:text-[56px] lg:text-[68px]"
+              className="flex flex-col gap-1 text-[44px] font-extrabold uppercase leading-[0.95] tracking-[-0.02em] text-ink sm:text-[56px] lg:text-[68px]"
               aria-hidden="true"
             >
               <span className="inline-block">
@@ -34,13 +34,13 @@ export default function Mission() {
 
             {/* Mission statement */}
             <div className="flex flex-col justify-center">
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-graphite/60">
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-ink-muted">
                 Our Mission
               </span>
-              <h2 className="mt-4 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-graphite sm:text-[38px] lg:text-[42px]">
+              <h2 className="mt-4 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-ink sm:text-[38px] lg:text-[42px]">
                 Transforming ideas into&nbsp;reality
               </h2>
-              <div className="mt-8 space-y-5 text-[16px] leading-[1.7] text-graphite/70 sm:text-[17px]">
+              <div className="mt-8 space-y-5 text-[16px] leading-[1.7] text-ink-body sm:text-[17px]">
                 <p>
                   We are consultants, helping leading companies navigate the digital
                   landscape — from advice to implementation. At the intersection of
