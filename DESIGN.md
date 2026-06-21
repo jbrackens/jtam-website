@@ -103,7 +103,7 @@ The JTAM mark is a **swarm** — a coordinated ring of particles (the "orbit rin
 
 Sticky, translucent dark background, 64px height, simple navigation, one pill CTA. The header logo **spins** (Aurora swarm). Scrolled state adds a pill-shaped nav bar.
 
-Navigation: About · Capabilities · Contact.
+Navigation: About · Contact.
 
 CTA: **Get in touch**. On smaller screens the links collapse to a hamburger menu.
 
@@ -116,15 +116,13 @@ All buttons are **pills** (`999px`).
 
 ## Homepage Structure
 
-1. **Header** — sticky, swarm mark + nav + pill CTA *Get in touch*. Nav: About · Capabilities · Contact.
-2. **Hero** — *Strategy meets execution.* Aurora canvas background (Northern Lights curtain effect), subhead about JTAM Group's offering. CTAs: *Start a conversation* · *What we do*. Marquee ticker: Strategy · Engineering · Operations · Cloud & Infra · Data & AI · Architecture · Security · Product · Consulting · Transformation.
-3. **What we do** — 3-card grid: Strategy & Advisory · Engineering & Delivery · Operations & Scale. Each with icon, description, capability pills.
+1. **Header** — sticky, swarm mark + nav + pill CTA *Get in touch*. Nav: About · Contact.
+2. **Hero** — *Strategy meets execution.* Aurora canvas background (Northern Lights curtain effect), subhead about JTAM Group's offering. CTAs: *Start a conversation* · *Learn more*. Marquee ticker: Strategy · Engineering · Operations · Cloud & Infra · Data & AI · Architecture · Security · Product · Consulting · Transformation.
+3. **Roles** — *End-to-end expertise. Delivered.* 3-card grid: Strategy & Advisory · Engineering & Delivery · Operations & Scale. Each with icon, description, capability pills.
 4. **Our Mission** (`#mission`) — Light cream (#F5F3EE) contrast section. Horse equation SVG (strategy + execution = partnership). Staggered "WE ARE CO.NSUL TANTS" display text with Aurora gradient accent. Two-column layout with mission statement.
-5. **The problem** — *Complexity scales faster than teams.* Stats: 70% / 2.5× / 18mo.
-6. **Capabilities** (`#capabilities`) — 6-card grid: Technology Strategy · Product Engineering · Cloud & Infrastructure · Data & Analytics · AI & Automation · Security & Compliance.
-7. **Trust / Why JTAM** (`#contact`) — *Built on trust. Measured by results.* 6 safeguards in a dark stage.
-8. **Final CTA** — *Ready to build what's next?* Buttons: *Start a conversation* · *Explore capabilities*.
-9. **Footer** — giant Aurora "JTAM" wordmark + columns + meta (*Strategy · Engineering · Operations*).
+5. **Trust / Why JTAM** (`#contact`) — *Built on trust. Measured by results.* 6 safeguards in a dark stage. Aurora ambient glow (radial gradients with cyan/mint/blue).
+6. **Final CTA** — *Ready to build what's next?* Buttons: *Start a conversation* · *Learn more*.
+7. **Footer** — giant Aurora "JTAM" wordmark + columns + meta (*Strategy · Engineering · Operations*).
 
 ## Motion
 
