@@ -105,7 +105,7 @@ export default function Capabilities() {
                 <div className={`mb-4 flex h-10 w-10 items-center justify-center rounded-[10px] ${cap.bgColor} ${cap.color}`}>
                   {cap.icon}
                 </div>
-                <h3 className="text-[17px] font-bold text-white/90">{cap.title}</h3>
+                <h3 className="text-[20px] font-bold text-white/90">{cap.title}</h3>
                 <p className="mt-2 text-[14px] leading-[1.6] text-white/45">{cap.description}</p>
               </div>
             </Reveal>

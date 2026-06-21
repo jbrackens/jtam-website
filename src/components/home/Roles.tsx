@@ -62,7 +62,7 @@ export default function Roles() {
                 <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-[12px] bg-white/[0.06] text-cyan">
                   {role.icon}
                 </div>
-                <h3 className="text-[17px] font-bold text-white/90">{role.title}</h3>
+                <h3 className="text-[20px] font-bold text-white/90">{role.title}</h3>
                 <p className="mt-3 text-[15px] leading-[1.6] text-white/50">{role.description}</p>
                 <div className="mt-5 flex flex-wrap gap-2">
                   {role.capabilities.map((cap) => (
