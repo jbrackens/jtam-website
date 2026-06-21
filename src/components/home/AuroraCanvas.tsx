@@ -47,6 +47,11 @@ function draw(
   mx: number,
   stars: Star[],
 ) {
+  // Bail if the canvas has no usable size — otherwise t = x / w divides by zero,
+  // producing NaN gradient coordinates that throw in createLinearGradient and
+  // crash the whole page (no error boundary wraps the canvas).
+  if (!(w > 0) || !(h > 0)) return
+
   ctx.clearRect(0, 0, w, h)
 
   // Star field
