@@ -3,7 +3,6 @@ import Logo from '@/components/Logo'
 
 const cols: [string, [string, string][]][] = [
   ['Services', [['About', '#mission'], ['Contact', 'mailto:hello@jtamb.com']]],
-  ['Company', [['Contact', 'mailto:hello@jtamb.com'], ['Careers', '#']]],
 ]
 
 export default function Footer() {
