@@ -33,15 +33,16 @@ export default {
         ink: '#050608',
         base: '#050608',
         soft: '#0C0F14',
+        cream: '#F5F3EE', // Mission light surface
         surface: '#111519',
         'surface-alt': '#181C22',
-        // Text on dark
+        // Text on dark (opacities meet WCAG AA on #050608 — see DESIGN.md)
         white: '#FFFFFF',
         body: 'rgba(255,255,255,0.6)',
-        muted: 'rgba(255,255,255,0.4)',
+        muted: 'rgba(255,255,255,0.55)',
         'text-primary': 'rgba(255,255,255,0.9)',
         'text-secondary': 'rgba(255,255,255,0.6)',
-        'text-tertiary': 'rgba(255,255,255,0.4)',
+        'text-tertiary': 'rgba(255,255,255,0.55)',
         // Aurora stops
         mint: '#6EE7B7',
         teal: '#2DD4BF',
@@ -53,10 +54,10 @@ export default {
         signal2: '#38BDF8',
         'signal-soft': '#E0F7FF',
         'deep-signal': '#0369A1',
-        // Borders on dark
+        // Borders on dark (line = the hairline default per DESIGN.md)
         border: 'rgba(255,255,255,0.08)',
         'border-strong': 'rgba(255,255,255,0.14)',
-        line: 'rgba(255,255,255,0.08)',
+        line: 'rgba(255,255,255,0.06)',
         'line-strong': 'rgba(255,255,255,0.14)',
         // Dark panel system
         'dark-text': '#F8FAFC',

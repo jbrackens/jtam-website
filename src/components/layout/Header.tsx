@@ -79,7 +79,7 @@ export default function Header() {
               key={label}
               href={href}
               onClick={() => setOpen(false)}
-              className="border-b border-white/[0.06] py-3 text-[16px] font-semibold text-white/90"
+              className="border-b border-line py-3 text-[16px] font-semibold text-white/90"
             >
               {label}
             </a>

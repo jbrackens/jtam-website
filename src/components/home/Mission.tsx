@@ -2,7 +2,7 @@ import Container from '@/components/ui/Container'
 
 export default function Mission() {
   return (
-    <section id="mission" className="bg-[#F5F3EE]">
+    <section id="mission" className="bg-cream">
       {/* Horse equation band */}
       <div className="flex items-center justify-center px-8 py-16 sm:py-20 lg:py-24">
         <img
@@ -18,7 +18,7 @@ export default function Mission() {
           <div className="grid gap-16 lg:grid-cols-2 lg:gap-20">
             {/* Big staggered text */}
             <div
-              className="flex flex-col gap-1 text-[44px] font-extrabold uppercase leading-[0.95] tracking-[-0.02em] text-[#0C0F14] sm:text-[56px] lg:text-[68px]"
+              className="flex flex-col gap-1 text-[44px] font-extrabold uppercase leading-[0.95] tracking-[-0.02em] text-graphite sm:text-[56px] lg:text-[68px]"
               aria-hidden="true"
             >
               <span className="inline-block">
@@ -34,13 +34,13 @@ export default function Mission() {
 
             {/* Mission statement */}
             <div className="flex flex-col justify-center">
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#0C0F14]/60">
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-graphite/60">
                 Our Mission
               </span>
-              <h2 className="mt-4 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-[#0C0F14] sm:text-[38px] lg:text-[42px]">
+              <h2 className="mt-4 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-graphite sm:text-[38px] lg:text-[42px]">
                 Transforming ideas into&nbsp;reality
               </h2>
-              <div className="mt-8 space-y-5 text-[16px] leading-[1.7] text-[#0C0F14]/70 sm:text-[17px]">
+              <div className="mt-8 space-y-5 text-[16px] leading-[1.7] text-graphite/70 sm:text-[17px]">
                 <p>
                   We are consultants, helping leading companies navigate the digital
                   landscape — from advice to implementation. At the intersection of

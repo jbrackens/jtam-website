@@ -26,7 +26,7 @@ export default function Trust() {
       <Container className="relative z-10">
         {/* Trust section */}
         <Reveal>
-          <div className="rounded-stage border border-white/[0.06] bg-white/[0.02] p-8 sm:p-12 lg:p-16">
+          <div className="rounded-stage border border-line bg-white/[0.02] p-8 sm:p-12 lg:p-16">
             {/* Corner brackets */}
             <div className="relative">
               {['top-0 left-0', 'top-0 right-0 rotate-90', 'bottom-0 right-0 rotate-180', 'bottom-0 left-0 -rotate-90'].map((pos) => (

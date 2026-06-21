@@ -105,7 +105,7 @@ export default function Hero() {
 
         {/* Marquee ticker band */}
         <div
-          className="absolute bottom-0 left-0 right-0 z-20 overflow-hidden border-y border-white/[0.06] bg-white/[0.03] py-5 backdrop-blur-sm sm:py-6"
+          className="absolute bottom-0 left-0 right-0 z-20 overflow-hidden border-y border-line bg-white/[0.03] py-5 backdrop-blur-sm sm:py-6"
           aria-hidden="true"
         >
           <div className="flex w-max animate-marquee">
