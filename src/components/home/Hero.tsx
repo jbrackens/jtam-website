@@ -95,8 +95,8 @@ export default function Hero() {
                 <Button href="mailto:hello@jtamb.com" arrow>
                   Start a conversation
                 </Button>
-                <Button href="#capabilities" variant="secondary">
-                  What we do
+                <Button href="#mission" variant="secondary">
+                  Learn more
                 </Button>
               </div>
             </div>
