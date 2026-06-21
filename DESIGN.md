@@ -58,11 +58,13 @@ A dark architecture palette with the cool **Aurora** spectral signature.
 |---|---|---|
 | `base` | `#050608` | Main page background (dark) |
 | `graphite` | `#0C0F14` | Stage panels, visual panels |
-| `body` | `rgba(255,255,255,0.50)` | Paragraph text on dark |
-| `muted` | `rgba(255,255,255,0.40)` | Labels, metadata, secondary text |
+| `body` | `rgba(255,255,255,0.60)` | Paragraph text on dark (7.3:1, AA) |
+| `muted` | `rgba(255,255,255,0.55)` | Labels, metadata, secondary text (6.3:1, AA) |
 | `line` | `rgba(255,255,255,0.06)` | Hairline borders |
 | `signal` | `#7DD3FC` | Solid UI accents |
 | `deep-signal` | `#0369A1` | Link hovers, active annotations |
+
+**Contrast floor:** any text that conveys meaning must clear WCAG AA on its background — 4.5:1 for normal text, 3:1 for large (18px+). On `#050608` that means `white/50` is the minimum for body/labels (`white/55` preferred); never drop reading text to `white/40` or below. On the cream Mission surface (`#F5F3EE`), ink text needs `#0C0F14/60`+ for labels and `/70`+ for body. Opacities below these are decorative only.
 
 ### Aurora spectral signature
 

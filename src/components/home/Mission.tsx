@@ -34,13 +34,13 @@ export default function Mission() {
 
             {/* Mission statement */}
             <div className="flex flex-col justify-center">
-              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#0C0F14]/40">
+              <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[#0C0F14]/60">
                 Our Mission
               </span>
               <h2 className="mt-4 text-[32px] font-bold leading-[1.06] tracking-[-0.03em] text-[#0C0F14] sm:text-[38px] lg:text-[42px]">
                 Transforming ideas into&nbsp;reality
               </h2>
-              <div className="mt-8 space-y-5 text-[16px] leading-[1.7] text-[#0C0F14]/55 sm:text-[17px]">
+              <div className="mt-8 space-y-5 text-[16px] leading-[1.7] text-[#0C0F14]/70 sm:text-[17px]">
                 <p>
                   We are consultants, helping leading companies navigate the digital
                   landscape — from advice to implementation. At the intersection of

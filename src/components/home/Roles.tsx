@@ -46,7 +46,7 @@ export default function Roles() {
     <section className="relative bg-base py-24 sm:py-32">
       <Container>
         <Reveal>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/40">
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">
             What we do
           </p>
           <h2 className="mt-4 max-w-[22ch] text-[32px] font-bold leading-[1.04] tracking-[-0.03em] text-white/90 sm:text-[42px]">
@@ -68,7 +68,7 @@ export default function Roles() {
                   {role.capabilities.map((cap) => (
                     <span
                       key={cap}
-                      className="rounded-pill border border-white/[0.06] bg-white/[0.03] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-white/40"
+                      className="rounded-pill border border-white/[0.06] bg-white/[0.03] px-3 py-1 font-mono text-[10px] uppercase tracking-[0.1em] text-white/55"
                     >
                       {cap}
                     </span>

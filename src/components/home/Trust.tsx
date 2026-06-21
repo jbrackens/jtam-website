@@ -33,7 +33,7 @@ export default function Trust() {
                 <span key={pos} className={`absolute ${pos} h-5 w-5 border-l-[1.5px] border-t-[1.5px] border-white/[0.1]`} />
               ))}
 
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/40">
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-white/55">
                 Why JTAM
               </p>
               <h2 className="mt-4 max-w-[26ch] text-[28px] font-bold leading-[1.06] tracking-[-0.03em] text-white/90 sm:text-[36px]">
@@ -46,7 +46,7 @@ export default function Trust() {
                   <Reveal key={s.title} delay={i * 60}>
                     <div className="py-3">
                       <h3 className="text-[20px] font-semibold text-white/80">{s.title}</h3>
-                      <p className="mt-1.5 text-[14px] leading-[1.55] text-white/40">{s.description}</p>
+                      <p className="mt-1.5 text-[14px] leading-[1.55] text-white/55">{s.description}</p>
                     </div>
                   </Reveal>
                 ))}
