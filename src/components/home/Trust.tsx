@@ -13,10 +13,17 @@ const safeguards = [
 
 export default function Trust() {
   return (
-    <section id="contact" className="relative bg-base py-24 sm:py-32">
+    <section id="contact" className="relative overflow-hidden bg-base py-24 sm:py-32">
       <div className="absolute inset-x-0 top-0 mx-auto h-px max-w-[600px] bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
 
-      <Container>
+      {/* Aurora ambient glow behind CTA */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+        <div className="absolute left-1/2 top-[55%] h-[1000px] w-[1600px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(34,211,238,0.22)_0%,rgba(45,212,191,0.12)_25%,rgba(56,189,248,0.06)_50%,transparent_72%)] blur-3xl" />
+        <div className="absolute left-[30%] top-[45%] h-[800px] w-[1000px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(110,231,183,0.16)_0%,rgba(45,212,191,0.08)_35%,transparent_65%)] blur-3xl" />
+        <div className="absolute left-[70%] top-[60%] h-[700px] w-[900px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(ellipse_at_center,rgba(59,130,246,0.16)_0%,rgba(56,189,248,0.08)_35%,transparent_65%)] blur-3xl" />
+      </div>
+
+      <Container className="relative z-10">
         {/* Trust section */}
         <Reveal>
           <div className="rounded-stage border border-white/[0.06] bg-white/[0.02] p-8 sm:p-12 lg:p-16">
