@@ -14,3 +14,14 @@ npm run dev
 ```bash
 npm run build
 ```
+
+## Deploy
+
+Hosted on **Cloudflare Pages** (project `jtam-website`), deployed manually:
+
+```bash
+npm run build
+wrangler pages deploy dist --project-name jtam-website
+```
+
+Run wrangler under **Node 20**. DNS and custom domains (`jtamb.com`, `www`) are managed in the Cloudflare dashboard.

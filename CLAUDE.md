@@ -1,6 +1,6 @@
 # JTAM Group site
 
-Static marketing site for JTAM Group — technology consulting and solutions. Stack: React 18 + TypeScript + Vite + Tailwind + react-router-dom, prerendered via vite-react-ssg (no framer-motion). Current public surface: single-page homepage. Deployed on Vercel (manual `vercel --prod`).
+Static marketing site for JTAM Group — technology consulting and solutions. Stack: React 18 + TypeScript + Vite + Tailwind + react-router-dom, prerendered via vite-react-ssg (no framer-motion). Current public surface: single-page homepage. Deployed on **Cloudflare Pages** (manual `wrangler pages deploy`).
 
 ## Design System
 
@@ -26,15 +26,16 @@ npm run preview  # preview prod build
 
 ## Deploy
 
-Production (`www.jtamb.com`) ships **manually** via the Vercel CLI — `git push` to `main` does **not** auto-deploy:
+Production (`jtamb.com` + `www`) is hosted on **Cloudflare Pages** (project `jtam-website`) and ships **manually** via Wrangler — `git push` does **not** auto-deploy:
 
 ```bash
-vercel --prod    # remote build + aliases the production domain
+npm run build
+wrangler pages deploy dist --project-name jtam-website
 ```
 
-Build runs `tsc --noEmit && vite-react-ssg build` (prerendered static output in `dist/`). SPA fallback routing is in `vercel.json`.
+Run wrangler under **Node 20**, not the machine-default Node 26. Auth is OAuth via `wrangler login`. DNS for `jtamb.com` is on Cloudflare (`@` and `www` are `CNAME → jtam-website.pages.dev`, Proxied); DNS records and Pages custom domains are managed in the **Cloudflare dashboard** — the `wrangler login` token can't edit DNS.
 
-To enable push-to-deploy, connect the GitHub repo in Vercel → project → Settings → Git.
+Build runs `tsc --noEmit && vite-react-ssg build` (prerendered static output in `dist/`). SPA fallback for unknown paths is `public/_redirects` (`/* /index.html 200`). Migrated from Vercel to Cloudflare Pages 2026-06-23; do not run `vercel`.
 
 ## Skill routing
 
