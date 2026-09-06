@@ -1,6 +1,6 @@
 # JTAM Group site
 
-Static marketing site for JTAM Group — technology consulting and solutions. Stack: React 18 + TypeScript + Vite + Tailwind + react-router-dom, prerendered via vite-react-ssg (no framer-motion). Current public surface: single-page homepage. Deployed on **Cloudflare Pages** (manual `wrangler pages deploy`).
+Static marketing site for JTAM Group — technology consulting and solutions. Stack: React 18 + TypeScript + Vite + Tailwind + react-router-dom, prerendered via vite-react-ssg (no framer-motion). Current public surface: single-page homepage. Deployed on **Cloudflare Pages**, automatically on push to `main`.
 
 ## Design System
 
@@ -26,7 +26,7 @@ npm run preview  # preview prod build
 
 ## Deploy
 
-Production (`jtamb.com` + `www`) is hosted on **Cloudflare Pages** (project `jtam-website`) and ships **manually** via Wrangler — `git push` does **not** auto-deploy:
+Production (`jtamb.com` + `www`) is hosted on **Cloudflare Pages** (project `jtam-website`). A push to `main` builds and deploys automatically via `.github/workflows/deploy-cloudflare-pages.yml` (it needs `CLOUDFLARE_ACCOUNT_ID` and `CLOUDFLARE_API_TOKEN` on the repo's Production environment). To ship by hand instead:
 
 ```bash
 npm run build
@@ -35,7 +35,9 @@ wrangler pages deploy dist --project-name jtam-website
 
 Run wrangler under **Node 20**, not the machine-default Node 26. Auth is OAuth via `wrangler login`. DNS for `jtamb.com` is on Cloudflare (`@` and `www` are `CNAME → jtam-website.pages.dev`, Proxied); DNS records and Pages custom domains are managed in the **Cloudflare dashboard** — the `wrangler login` token can't edit DNS.
 
-Build runs `tsc --noEmit && vite-react-ssg build` (prerendered static output in `dist/`). SPA fallback for unknown paths is `public/_redirects` (`/* /index.html 200`). Migrated from Vercel to Cloudflare Pages 2026-06-23; do not run `vercel`.
+Build runs `tsc --noEmit && vite-react-ssg build` (prerendered static output in `dist/`). SPA fallback for unknown paths is `public/_redirects` (`/* /index.html 200`).
+
+Migrated from Vercel to Cloudflare Pages 2026-06-23; do not run `vercel`. That migration only changed docs — the deploy workflow was added 2026-09-06. The old Vercel project still exists and still serves a duplicate copy at `jtam-website.vercel.app`; deleting it and removing the Vercel GitHub App is an outstanding manual step (see `README.md`).
 
 ## Skill routing
 
